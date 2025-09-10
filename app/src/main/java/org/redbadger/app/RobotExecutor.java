@@ -24,9 +24,8 @@ public class RobotExecutor {
             ORIENTATION orientation = ORIENTATION.valueOf(robotPosition[2]);
             Robot robot = new Robot(x, y, orientation);
             String instructions = scan.nextLine().trim();
-            System.out.println("Begining :: " + robot.getStatus());
             executeInstructions(robot, instructions, maxX, maxY, scents);
-            System.out.println("Ending :: " + robot.getStatus());
+            System.out.println(robot.getStatus());
         }
     }
 
